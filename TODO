@@ -1,0 +1,7 @@
+
+Todo:
+  instal vue:
+  npm install npm@latest -g -> cài đặt npm mới nhất
+  npm install -g vue-cli -> cài đặt vue cli
+  Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -> đặt lại quyền chạy .PS1
+  yarn global add @vue/cli-init 
