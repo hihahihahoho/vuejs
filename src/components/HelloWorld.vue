@@ -4,10 +4,7 @@
     <h2>Essential Links</h2>
     <ul>
       <li>
-        <a
-          href="https://vuejs.org"
-          target="_blank"
-        >
+        <a href="#/testPath">
           Core Docs
         </a>
       </li>
@@ -80,12 +77,18 @@
         </a>
       </li>
     </ul>
+    <testPath title="afsdf" />
   </div>
 </template>
 
 <script>
+import testPath from '@/components/testPath'
+
 export default {
   name: 'HelloWorld',
+  components: {
+    testPath
+  },
   data () {
     return {
       msg: 'Welcome to Your Vue.js App'
@@ -96,7 +99,8 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h1, h2 {
+h1,
+h2 {
   font-weight: normal;
 }
 ul {
