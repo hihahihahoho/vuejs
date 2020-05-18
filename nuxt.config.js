@@ -1,4 +1,4 @@
-
+import hooks from './hooks'
 export default {
   mode: 'universal',
   /*
@@ -22,9 +22,9 @@ export default {
   /*
   ** Global CSS
   */
-  css: [
-    'vuesax/dist/vuesax.css'
-  ],
+  // css: [
+  //   'vuesax/dist/vuesax.css'
+  // ],
   /*
   ** Plugins to load before mounting the App
   */
@@ -62,6 +62,7 @@ export default {
     }
   },
   router: {
-    base: '/dist/'
-  }
+    base: '/web/test/vue/dist'
+  },
+  hooks: hooks(this)
 }

@@ -7957,7 +7957,7 @@ vue@^2.6.11:
   resolved "https://registry.yarnpkg.com/vue/-/vue-2.6.11.tgz#76594d877d4b12234406e84e35275c6d514125c5"
   integrity sha512-VfPwgcGABbGAue9+sfrD4PuwFar7gPb1yl1UK1MwXoQPAw0BKSqWfoYCT/ThFrdEVWoI51dBuyCoiNU9bZDZxQ==
 
-vuesax@^4.0.1-alpha.8:
+vuesax@^4.0.1-alpha.18:
   version "4.0.1-alpha.18"
   resolved "https://registry.yarnpkg.com/vuesax/-/vuesax-4.0.1-alpha.18.tgz#f10b6fa7e5eda1093b18c42b49dc9f17d39fc9e5"
   integrity sha512-uvyFJ+7ukcPorRsBRGNEvNOP8XlG3USP6YeD/nhwPrBfTpvB9BHgorl06NzInAIJ+b7ERfNUU1kIRdfgE7EUdg==

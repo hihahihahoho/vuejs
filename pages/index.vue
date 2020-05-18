@@ -57,6 +57,7 @@
           GitHub
         </a>
       </div>
+      <vs-button>Hello World</vs-button>
     </div>
   </div>
 </template>
