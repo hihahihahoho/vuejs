@@ -57,6 +57,12 @@
           GitHub
         </a>
       </div>
+      <vs-button
+        success
+        flat
+        :active="active == 1"
+        @click="active = 1"
+      > tùng</vs-button>
       <vs-button>Hello World</vs-button>
     </div>
   </div>
@@ -75,6 +81,10 @@ export default {
 </script>
 
 <style>
+:root {
+   --test-color: #35495e;
+   --test-font: 55px;
+}
 .container {
   margin: 0 auto;
   min-height: 100vh;
@@ -85,12 +95,13 @@ export default {
 }
 
 .title {
+   --test-font: 55px;
   font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
     'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   display: block;
   font-weight: 300;
-  font-size: 55px;
-  color: #35495e;
+  font-size: var(--test-font);
+  color: var(--test-color);
   letter-spacing: 1px;
   text-transform: capitalize;
   margin: 25px 0px

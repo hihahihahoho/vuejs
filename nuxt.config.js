@@ -2,8 +2,8 @@ import hooks from './hooks'
 export default {
   mode: 'universal',
   /*
-  ** Headers of the page
-  */
+     ** Headers of the page
+     */
   head: {
     title: process.env.npm_package_name || '',
     meta: [
@@ -16,50 +16,62 @@ export default {
     ]
   },
   /*
-  ** Customize the progress-bar color
-  */
+     ** Customize the progress-bar color
+     */
   loading: { color: '#fff' },
   /*
-  ** Global CSS
-  */
+     ** Global CSS
+     */
   // css: [
   //   'vuesax/dist/vuesax.css'
   // ],
   /*
-  ** Plugins to load before mounting the App
-  */
+     ** Plugins to load before mounting the App
+     */
   plugins: [
     '@/plugins/vuesax'
   ],
   /*
-  ** Nuxt.js dev-modules
-  */
+     ** Nuxt.js dev-modules
+     */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     '@nuxtjs/eslint-module'
   ],
   /*
-  ** Nuxt.js modules
-  */
+     ** Nuxt.js modules
+     */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios'
   ],
   /*
-  ** Axios module configuration
-  ** See https://axios.nuxtjs.org/options
-  */
+     ** Axios module configuration
+     ** See https://axios.nuxtjs.org/options
+     */
   axios: {
   },
   /*
-  ** Build configuration
-  */
+     ** Build configuration
+     */
   build: {
     /*
-    ** You can extend webpack config here
-    */
+        ** You can extend webpack config here
+        */
+    postcss: {
+      // plugins: {
+      //   'postcss-css-variables': {}
+      // },
+      preset: {
+        // Change the postcss-preset-env settings
+        browsers: '> .5% or last 2 versions'
+      }
+
+    },
     extend (config, ctx) {
+
     }
+
   },
   router: {
     base: '/web/test/vue/dist'
