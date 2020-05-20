@@ -29,7 +29,9 @@ export default {
      ** Plugins to load before mounting the App
      */
   plugins: [
-    '@/plugins/vuesax'
+    '@/plugins/vuesax',
+    '@/plugins/bootstrap',
+    '@/plugins/derective'
   ],
   /*
      ** Nuxt.js dev-modules
@@ -43,8 +45,18 @@ export default {
      */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    'bootstrap-vue/nuxt'
   ],
+  bootstrapVue: {
+    componentPlugins: [
+      'LayoutPlugin',
+      'FormCheckboxPlugin',
+      'ToastPlugin',
+      'ModalPlugin'
+    ],
+    directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
+  },
   /*
      ** Axios module configuration
      ** See https://axios.nuxtjs.org/options

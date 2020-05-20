@@ -60,10 +60,18 @@
       <vs-button
         success
         flat
-        :active="active == 1"
         @click="active = 1"
-      > tùng</vs-button>
-      <vs-button>Hello World</vs-button>
+      >
+        tùng
+      </vs-button>
+      <div>
+        <vs-button v-b-modal.modal-1>
+          Launch demo modal
+        </vs-button>
+        <b-modal id="modal-1" centered="">
+          Launch centered modal
+        </b-modal>
+      </div>
     </div>
   </div>
 </template>
@@ -73,6 +81,7 @@ import Logo from '~/components/Logo.vue'
 import VuesaxLogo from '~/components/VuesaxLogo.vue'
 
 export default {
+  layout: 'menu',
   components: {
     Logo,
     VuesaxLogo
@@ -82,8 +91,8 @@ export default {
 
 <style>
 :root {
-   --test-color: #35495e;
-   --test-font: 55px;
+  --test-color: #35495e;
+  --test-font: 55px;
 }
 .container {
   margin: 0 auto;
@@ -95,16 +104,16 @@ export default {
 }
 
 .title {
-   --test-font: 55px;
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --test-font: 55px;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   display: block;
   font-weight: 300;
   font-size: var(--test-font);
   color: var(--test-color);
   letter-spacing: 1px;
   text-transform: capitalize;
-  margin: 25px 0px
+  margin: 25px 0px;
 }
 
 .subtitle {
@@ -118,12 +127,12 @@ export default {
 
 .subtitle a {
   font-weight: 500;
-  color: inherit
+  color: inherit;
 }
 
 .links {
   padding-top: 15px;
-  margin-bottom: 20px
+  margin-bottom: 20px;
 }
 
 .content-logos {
@@ -135,11 +144,11 @@ export default {
 .plus {
   font-size: 2.5rem;
   margin: 15px;
-  color: #35495e
+  color: #35495e;
 }
 .h3 {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-weight: 400;
   margin: 10px;
 }
