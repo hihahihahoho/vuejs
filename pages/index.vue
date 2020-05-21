@@ -68,10 +68,37 @@
         <vs-button v-b-modal.modal-1>
           Launch demo modal
         </vs-button>
-        <b-modal id="modal-1" centered="">
+        <b-modal
+          id="modal-1"
+          centered=""
+        >
           Launch centered modal
         </b-modal>
       </div>
+      <figure class="picture">
+        <picture>
+          <source
+            data-srcset="~/assets/images/test-image.jpg?webp"
+            type="image/webp"
+          >
+          <source
+            data-srcset="~/assets/images/test-image.jpg"
+            type="image/jpg"
+          >
+          <img
+            data-src="~/assets/images/test-image.jpg"
+            class="lazyload"
+            alt="Alternate text for the image"
+          >
+        </picture>
+      </figure>
+      <figure class="picture">
+        <img
+          data-src="~/assets/images/test-image.jpg"
+          class="lazyload"
+          alt="Alternate text for the image"
+        >
+      </figure>
     </div>
   </div>
 </template>

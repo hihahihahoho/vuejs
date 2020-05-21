@@ -31,7 +31,8 @@ export default {
   plugins: [
     '@/plugins/vuesax',
     '@/plugins/bootstrap',
-    '@/plugins/derective'
+    '@/plugins/derective',
+    '@/plugins/lazysizes'
   ],
   /*
      ** Nuxt.js dev-modules
@@ -46,8 +47,27 @@ export default {
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
-    'bootstrap-vue/nuxt'
+    'bootstrap-vue/nuxt',
+    '@aceforth/nuxt-optimized-images'
   ],
+  optimizedImages: {
+    inlineImageLimit: -1,
+    handleImages: ['jpeg', 'png', 'svg', 'webp', 'gif'],
+    optimizeImages: true,
+    optimizeImagesInDev: false,
+    defaultImageLoader: 'img-loader',
+    mozjpeg: {
+      quality: 70
+    },
+    optipng: false,
+    pngquant: {
+      speed: 7,
+      quality: [0.65, 0.8]
+    },
+    webp: {
+      quality: 80
+    }
+  },
   bootstrapVue: {
     componentPlugins: [
       'LayoutPlugin',
@@ -80,8 +100,11 @@ export default {
       }
 
     },
-    extend (config, ctx) {
-
+    extend (config, { isDev, isClient, loaders: { vue } }) {
+      if (isClient) {
+        vue.transformAssetUrls.img = ['data-src', 'src']
+        vue.transformAssetUrls.source = ['data-srcset', 'srcset']
+      }
     }
 
   },
