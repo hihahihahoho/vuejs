@@ -5,3 +5,15 @@ Todo:
   npm install -g vue-cli -> cài đặt vue cli
   Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy Unrestricted -> đặt lại quyền chạy .PS1
   yarn global add @vue/cli-init 
+  
+  Doc:
+  Image compress: https://dev.to/ignore_you/minify-generate-webp-and-lazyload-images-in-your-vue-nuxt-application-1ilm
+
+  Component:
+  ☐ Image
+  ☐ test vutify
+  ☐ Remove Vusax
+  ☐ Acordion
+
+  Future:
+  ☐ Create upload site
