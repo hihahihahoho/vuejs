@@ -1,6 +1,7 @@
+import colors from 'vuetify/es5/util/colors'
 import hooks from './hooks'
 export default {
-  mode: 'universal',
+  mode: 'spa',
   /*
      ** Headers of the page
      */
@@ -29,8 +30,6 @@ export default {
      ** Plugins to load before mounting the App
      */
   plugins: [
-    '@/plugins/vuesax',
-    '@/plugins/bootstrap',
     '@/plugins/derective',
     '@/plugins/lazysizes'
   ],
@@ -46,8 +45,8 @@ export default {
      */
   modules: [
     // Doc: https://axios.nuxtjs.org/usage
+    '@nuxtjs/vuetify',
     '@nuxtjs/axios',
-    'bootstrap-vue/nuxt',
     '@aceforth/nuxt-optimized-images'
   ],
   optimizedImages: {
@@ -68,14 +67,21 @@ export default {
       quality: 80
     }
   },
-  bootstrapVue: {
-    componentPlugins: [
-      'LayoutPlugin',
-      'FormCheckboxPlugin',
-      'ToastPlugin',
-      'ModalPlugin'
-    ],
-    directivePlugins: ['VBPopoverPlugin', 'VBTooltipPlugin', 'VBScrollspyPlugin']
+  vuetify: {
+    theme: {
+      dark: true,
+      themes: {
+        dark: {
+          primary: colors.blue,
+          accent: colors.grey.darken3,
+          secondary: colors.amber.darken3,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        }
+      }
+    }
   },
   /*
      ** Axios module configuration
