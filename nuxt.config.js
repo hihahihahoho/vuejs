@@ -1,4 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
 import hooks from './hooks'
 export default {
   mode: 'spa',
@@ -31,7 +30,8 @@ export default {
      */
   plugins: [
     '@/plugins/derective',
-    '@/plugins/lazysizes'
+    '@/plugins/lazysizes',
+    '@/plugins/i18n'
   ],
   /*
      ** Nuxt.js dev-modules
@@ -68,20 +68,7 @@ export default {
     }
   },
   vuetify: {
-    theme: {
-      dark: true,
-      themes: {
-        dark: {
-          primary: colors.blue,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
-      }
-    }
+    optionsPath: './vuetify.options.js'
   },
   /*
      ** Axios module configuration
@@ -115,7 +102,8 @@ export default {
 
   },
   router: {
-    base: '/web/test/vue/dist'
+    base: '/web/test/vue/dist',
+    middleware: 'i18n'
   },
   hooks: hooks(this)
 }

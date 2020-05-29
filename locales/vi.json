@@ -1,0 +1,38 @@
+{
+  "links": {
+    "home": "Home",
+    "about": "About",
+    "english": "English version",
+    "french": "French version"
+  },
+  "home": {
+    "title": "Welcome",
+    "introduction": "This is an introduction in English."
+  },
+  "about": {
+    "title": "About",
+    "introduction": "This page is made to give you more informations."
+  },
+  "test": {
+    "title2": "Thông điệp",
+    "tooltip": "Nguồn"
+  },
+  "$vuetify": {
+    "dataTable": {
+      "itemsPerPageText": "Bản ghi trong 1 trang:",
+      "ariaLabel": {
+        "sortDescending": "Sorted descending.",
+        "sortAscending": "Sorted ascending.",
+        "sortNone": "Not sorted.",
+        "activateNone": "Activate to remove sorting.",
+        "activateDescending": "Activate to sort descending.",
+        "activateAscending": "Activate to sort ascending."
+      },
+      "sortBy": "Sort by"
+    }
+  },
+  "message": "Thông điệp",
+  "button": {
+    "test": "Ấn vào tôi"
+  }
+}
