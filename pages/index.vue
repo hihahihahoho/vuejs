@@ -195,12 +195,15 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   props: {
     source: String
+
   },
   data () {
     return ({
+      infoTest: 'null2',
       message2: '',
       drawer: null,
       dialog1: false,
@@ -303,6 +306,14 @@ export default {
         }
       ]
     })
+  },
+  mounted () {
+    axios
+      .get('https://restapi.quiz.edu.vn/trungtamhoaiphuong/tags')
+      .then(response => (this.infoTest = response))
+      .then(response => (console.log(this.infoTest)))
+  },
+  created () {
   },
   methods: {
     changeLang (lang) {
