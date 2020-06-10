@@ -30,8 +30,8 @@ export default {
      */
   plugins: [
     '@/plugins/derective',
-    '@/plugins/lazysizes',
-    '@/plugins/i18n'
+    '@/plugins/lazysizes'
+    // '@/plugins/i18n'
   ],
   /*
      ** Nuxt.js dev-modules
@@ -47,7 +47,29 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/vuetify',
     '@nuxtjs/axios',
-    '@aceforth/nuxt-optimized-images'
+    '@aceforth/nuxt-optimized-images',
+    ['nuxt-i18n',
+      {
+        locales: [
+          {
+            name: 'Tiếng Việt',
+            code: 'vi',
+            iso: 'vi-VI',
+            file: 'vi.js'
+          },
+          {
+            name: 'English',
+            code: 'en',
+            iso: 'en-US',
+            file: 'en.js'
+          }
+        ],
+        lazy: true,
+        langDir: 'locales/',
+        defaultLocale: 'vi',
+        strategy: 'no_prefix'
+      }
+    ]
   ],
   optimizedImages: {
     inlineImageLimit: -1,
@@ -102,8 +124,8 @@ export default {
 
   },
   router: {
-    base: '/web/test/vue/dist',
-    middleware: 'i18n'
+    base: '/web/test/vue/dist'
+    // middleware: 'i18n'
   },
   hooks: hooks(this)
 }

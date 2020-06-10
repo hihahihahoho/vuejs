@@ -17,9 +17,9 @@
     "imagemin-pngquant": "^8.0.0",
     "lazysizes": "^5.2.1-rc2",
     "nuxt": "^2.0.0",
+    "nuxt-i18n": "^6.12.2",
     "postcss-css-variables": "^0.17.0",
     "postcss-custom-properties": "^9.1.1",
-    "vue-i18n": "^8.18.1",
     "webp-loader": "^0.6.0"
   },
   "devDependencies": {

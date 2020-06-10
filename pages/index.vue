@@ -23,7 +23,7 @@
 
     <v-app-bar app clipped-left>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Application</v-toolbar-title>
+      <v-toolbar-title>{{ $t('test.title2') }}</v-toolbar-title>
     </v-app-bar>
 
     <v-content>
@@ -32,11 +32,14 @@
           <v-col>
             <v-select
               v-model="message2"
-              :items="['en', 'vi']"
+              :items="langs"
               label="Lang"
-              @change="changeLang(message2)"
+              @change="changeLocale(message2)"
             />
             <p>{{ $t('test.title2') }}: {{ message2 }}</p>
+            <nuxt-link to="/test">
+              test
+            </nuxt-link>
           </v-col>
           <v-col class="shrink">
             <v-tooltip right>
@@ -203,6 +206,7 @@ export default {
   },
   data () {
     return ({
+      langs: [],
       infoTest: 'null2',
       message2: '',
       drawer: null,
@@ -312,13 +316,16 @@ export default {
       .get('https://restapi.quiz.edu.vn/trungtamhoaiphuong/tags')
       .then(response => (this.infoTest = response))
       .then(response => (console.log(this.infoTest)))
+    this.langs = this.$i18n.locales.map((item) => {
+      return item.code
+    })
+    console.log(this.langs)
   },
   created () {
   },
   methods: {
-    changeLang (lang) {
-      this.$store.commit('SET_LANG', lang)
-      this.$router.push({ path: `${this.$router.currentRoute.path}?lang=${lang}` })
+    changeLocale (locale) {
+      this.$i18n.setLocale(locale)
     }
   }
 }
